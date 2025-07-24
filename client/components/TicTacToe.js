@@ -4,7 +4,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import io from 'socket.io-client';
 
 
-const socket = io('http://localhost:3000');
+const socket = io('http://192.168.1.162:3000');
 
 
 export default function TicTacToe() {
@@ -41,7 +41,6 @@ export default function TicTacToe() {
     if (!myTurn || board[index] || !symbol) {
       return;
     }
-    console.log('Click!');
 
     const newBoard = [...board];
     newBoard[index] = symbol;
