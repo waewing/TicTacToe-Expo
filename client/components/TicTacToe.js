@@ -20,7 +20,6 @@ export default function TicTacToe() {
       return;
     }
     socket.on('startGame', ({ room: gameRoom, symbol: playerSymbol }) => {
-      console.log('TicTacToe: Game started - Room:', gameRoom, 'Symbol:', playerSymbol);
       setRoom(gameRoom);
       setSymbol(playerSymbol);
       setmyTurn(playerSymbol === 'X');

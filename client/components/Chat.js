@@ -12,6 +12,7 @@ export default function Chat() {
 
     useEffect(() => {
         if (!socket || !isConnected) {
+            console.log('no socket chat')
             return;
         }
 

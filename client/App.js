@@ -5,7 +5,6 @@ import Chat from './components/Chat';
 import { SocketProvider } from './contexts/SocketContext';
 
 export default function App() {
-  console.log('App: Rendering with SocketProvider');
   
   return (
     <SocketProvider>

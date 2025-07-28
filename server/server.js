@@ -23,8 +23,9 @@ io.on('connection', (socket) => {
         socket.join(room);
         waitingPlayer.join(room);
 
-        socket.emit('startGame', { room, symbol: 'O' });
+        // First player (waitingPlayer) gets 'X', second player (socket) gets 'O'
         waitingPlayer.emit('startGame', { room, symbol: 'X' });
+        socket.emit('startGame', { room, symbol: 'O' });
 
         waitingPlayer = null;
     } else {
