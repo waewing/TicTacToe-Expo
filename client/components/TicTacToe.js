@@ -1,7 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React, { useEffect, useState, useRef } from 'react';
+<<<<<<< HEAD
 import { useSocket } from '../contexts/SocketContext';
+=======
+import io from 'socket.io-client';
+
+
+const socket = io('http://localhost:3000');
+
+>>>>>>> parent of 310fd2f (Removed Console Log Debugging)
 
 export default function TicTacToe() {
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -42,6 +50,7 @@ export default function TicTacToe() {
     if (!myTurn || board[index] || !symbol || !socket) {
       return;
     }
+    console.log('Click!');
 
     const newBoard = [...board];
     newBoard[index] = symbol;
