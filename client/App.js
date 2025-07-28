@@ -2,17 +2,14 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import TicTacToe from './components/TicTacToe';
 import Chat from './components/Chat';
-import { SocketProvider } from './contexts/SocketContext';
 
 export default function App() {
   
   return (
-    <SocketProvider>
       <View style={styles.container}>
         <TicTacToe />
         <Chat />
       </View>
-    </SocketProvider>
   );
 }
 
